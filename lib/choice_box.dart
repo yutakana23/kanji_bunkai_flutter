@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'question_x_2.dart';
 
 enum RadioValue{ FIRST, SECOND, THIRD, FOURS}
 
@@ -66,12 +67,16 @@ class _ChoiceBoxState extends State<ChoiceBox> {
                               "次へ（NEXT）",
                               style: TextStyle(color: Colors.white, fontSize: 18),
                             ),
-                            onPressed: () => Navigator.pop(context),
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return Question2();
+                              }));
+                            },
                             gradient: LinearGradient(colors: [
                               Color.fromRGBO(116, 116, 191, 1.0),
                               Color.fromRGBO(52, 138, 199, 1.0),
                             ]),
-                          )
+                          ),
                         ],
                       ).show();
                       // Alert(context: context, title: "正解です。次の問いに進みます。", desc: "Is the correct answer. Proceed to the next question.").show();
