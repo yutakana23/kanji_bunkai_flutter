@@ -21,4 +21,5 @@ flutter:
 
   assets:
     - images/
+    - images/kanji_components/
 
